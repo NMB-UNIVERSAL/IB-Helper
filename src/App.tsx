@@ -5,6 +5,9 @@ import './styles.css'
 // Theme components
 import { ThemeProvider } from './ThemeContext'
 import ThemeToggle from './components/ThemeToggle'
+import ScrollIndicator from './components/ScrollIndicator'
+import PageTransition from './components/PageTransition'
+import ScrollToTop from './components/ScrollToTop'
 
 // Page components
 import HomePage from './pages/HomePage.tsx'
@@ -20,24 +23,54 @@ function App() {
   const renderPage = () => {
     switch (currentPage) {
       case 'home':
-        return <HomePage navigateTo={setCurrentPage} />
+        return (
+          <PageTransition transitionKey="home">
+            <HomePage navigateTo={setCurrentPage} />
+          </PageTransition>
+        )
       case 'ia':
-        return <IAPage navigateTo={setCurrentPage} />
+        return (
+          <PageTransition transitionKey="ia">
+            <IAPage navigateTo={setCurrentPage} />
+          </PageTransition>
+        )
       case 'ee':
-        return <EEPage navigateTo={setCurrentPage} />
+        return (
+          <PageTransition transitionKey="ee">
+            <EEPage navigateTo={setCurrentPage} />
+          </PageTransition>
+        )
       case 'excel':
-        return <ExcelPage navigateTo={setCurrentPage} />
+        return (
+          <PageTransition transitionKey="excel">
+            <ExcelPage navigateTo={setCurrentPage} />
+          </PageTransition>
+        )
       case 'geogebra':
-        return <GeoGebraPage navigateTo={setCurrentPage} />
+        return (
+          <PageTransition transitionKey="geogebra">
+            <GeoGebraPage navigateTo={setCurrentPage} />
+          </PageTransition>
+        )
       case 'desmos':
-        return <DesmosPage navigateTo={setCurrentPage} />
+        return (
+          <PageTransition transitionKey="desmos">
+            <DesmosPage navigateTo={setCurrentPage} />
+          </PageTransition>
+        )
       default:
-        return <HomePage navigateTo={setCurrentPage} />
+        return (
+          <PageTransition transitionKey="home">
+            <HomePage navigateTo={setCurrentPage} />
+          </PageTransition>
+        )
     }
   }
 
   const AppContent = () => (
     <div className="app-container">
+      <ScrollToTop currentPage={currentPage} />
+      <ScrollIndicator />
       <header>
         <h1 onClick={() => setCurrentPage('home')} style={{ cursor: 'pointer' }}>
           IB Program Guide
