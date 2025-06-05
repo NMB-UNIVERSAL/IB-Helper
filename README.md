@@ -1,14 +1,15 @@
-This is a web application made to educate IB DP students on how the internal Assesment and Extended essay works, as well as teach how to use tools such as Excel, Geogebra, and Desmos which they will need through out their DP journey
+**IB DP Internal Assessment & Extended Essay Guide**
+
+This web application is designed to support IB Diploma Programme (DP) students by providing clear guidance on the Internal Assessment (IA) and Extended Essay (EE) processes. Additionally, it offers tutorials on essential tools like Excel, GeoGebra, and Desmos that students will frequently use throughout their DP journey.
 
 **Features**
 
--IA format and explanation
--EE format and explanation
+-Detailed overview and explanation of the IA format
+-Comprehensive guidance on the EE format and requirements
+-Step-by-step tutorials on using Excel for data analysis
+-Instructions on leveraging GeoGebra for mathematics and modeling
+-Guide to using Desmos for graphing and visual learning
 
--How to use Excel
--How to use Geogebra
--How to use Desmos
-
-**Use**
-
-URL of Site coming soon ...
+**How to Use**
+Simply visit the site to explore all sections and resources:
+https://ib-program-guide.netlify.app/
